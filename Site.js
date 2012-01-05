@@ -33,7 +33,7 @@ function SearchPlace()
 
 function PrintData(estabelecimentos)
 {
-	document.getElementById("estabelecimentos").innerHTML += 
+	document.getElementById("estabelecimentos").innerHTML = 
 		"<p class=status>Foram encontrados " + estabelecimentos.length + " estabelecimentos!</p>"
 	
 	for (var i = 0; i < estabelecimentos.length; i++) 
@@ -71,9 +71,7 @@ function PrintData(estabelecimentos)
 		
 		result += "</table>"
 		
-		document.getElementById("estabelecimentos").innerHTML += result
-		
-		// document.getElementById("estabelecimentos").innerHTML += "<<br />"
+		document.getElementById("estabelecimentos").innerHTML += result	
 	}
 	
 }
