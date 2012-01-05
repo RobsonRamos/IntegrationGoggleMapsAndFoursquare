@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang=pt-br>
+<head>    
+	<title>Exemplo de Integração entre Google Maps e Foursquare</title>		
+    <script src='http://maps.google.com/maps?file=api&v=1&key=ABQIAAAARANOtySnzT16s91Pzh2eURT2yXp_ZAY8_ufC3CFXhHIE1NvwkxREPgO6EhsefuW7Jx0y5ahWorOhCg'></script>        
+    <script src=Site.js></script>		
+	<link rel=stylesheet href=Site.css></link>
+</head>
+<body>
+	
+	<div id=content>
+		<h2 id=cabecalho>Integração entre GoogleMaps e Foursquare</h2>
+		
+		<input type=hidden id=latitude />
+		<input type=hidden id=longitude />
+		
+		<div id=map></div>
+		
+		<div id=estabelecimentos></div>
+	</div>
+	<script>
+		// Cria o controle de mapa e registra os eventos.
+		var map = new GMap(document.getElementById("map"));
+		map.setMapType();
+		map.addControl(new GLargeMapControl()); // Controle de Zoom
+		map.addControl(new GMapTypeControl()); // Tipo de mapa
+		map.centerAndZoom(new GPoint(-46.64078, -23.62558), 1); // Latitude, longitude e nível de Zoom.
+		GEvent.addListener(map, "click", function (overlay, latLng) {
+			document.getElementById('latitude').value = latLng.lat();
+			document.getElementById('longitude').value = latLng.lng();
+			document.getElementById("estabelecimentos").innerHTML = "";
+			SearchPlace();
+		});
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+body
+{
+	background: url('Background.jpg') no-repeat;
+}
+h2
+{
+	color: #27408B;
+}
+#content
+{	
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+	margin: 100;	
+}
+h2
+{
+	text-align: center;
+}
+#map
+{	
+	border: 2px outset;
+	width: 700px; 
+	height: 500px
+}
+.status
+{
+	font-size: large;
+	color:#ff0000;
+	text-transform: 
+}
+table
+{
+	border:1px dashed #ddd;
+	margin: 2px;
+}
+table:hover{
+	background-color:#BCD2EE;
+	border-color: #104E8B;
+}
+td
+{	
+	width: 250px;
+	padding: 5px;		
+}
+.post
+{
+	width: 250px;
+	font-style: italic;		
+}
+.info 
+{
+	font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+}
