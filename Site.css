@@ -2,10 +2,6 @@ body
 {
 	background: url('Background.jpg') no-repeat;
 }
-h2
-{
-	color: #27408B;
-}
 #content
 {	
 	margin-left: auto;
@@ -13,9 +9,23 @@ h2
 	width: 800px;
 	margin: 100;	
 }
-h2
+h1
 {
+	color: #27408B;
 	text-align: center;
+	border-bottom: 1px solid;
+}
+.intro
+{
+	font-family: Calibri, "Times New Roman", Arial;	
+	font-size: large;	
+
+}
+.intro_img
+{
+	position: relative;
+	padding: 100;	
+	top: 10px;
 }
 #map
 {	
